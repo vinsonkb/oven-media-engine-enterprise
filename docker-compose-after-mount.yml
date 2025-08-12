@@ -4,8 +4,8 @@ services:
     container_name: ovenmediaengine
     restart: unless-stopped
     environment:
-      - OME_LICENSE_KEY=<Your.License.Key>
-      - OME_HOST_IP=<Your.HOST.IP.Address>
+      - OME_LICENSE_KEY=${OME_LICENSE_KEY}
+      - OME_HOST_IP=${OME_HOST_IP}
     network_mode: host
     # ports:
     #   - 1935:1935

@@ -1,0 +1,24 @@
+services:
+  ovenmediaengine:
+    image: ovenmediaengine-enterprise
+    container_name: ovenmediaengine
+    restart: unless-stopped
+    environment:
+      - OME_LICENSE_KEY=<Your.License.Key>
+      - OME_HOST_IP=<Your.HOST.IP.Address>
+    network_mode: host
+    # ports:
+    #   - 1935:1935
+    #   - 8080:8080
+    #   - 9999:9999/udp
+    #   - 9000:9000
+    #   - 3333:3333
+    #   - 3478:3478
+    #   - 10000-10009:10000-10009/udp
+    volumes:
+      - $OME_DOCKER_HOME/origin_conf:/opt/ovenmediaengine/bin/origin_conf
+      - $OME_DOCKER_HOME/logs:/var/log/ovenmediaengine
+      - $OME_DOCKER_HOME/ovenstudio/system.env:/opt/ovenmediaengine/ovenstudio/system.env
+      - $OME_DOCKER_HOME/ovenstudio/data:/opt/ovenmediaengine/ovenstudio/data
+      - $OME_DOCKER_HOME/delivery/delivery.db:/opt/ovenmediaengine/delivery/delivery.db
+      - $OME_DOCKER_HOME/delivery/conf:/opt/ovenmediaengine/delivery/conf

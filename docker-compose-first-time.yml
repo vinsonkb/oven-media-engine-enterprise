@@ -15,3 +15,10 @@ services:
     #   - 3333:3333
     #   - 3478:3478
     #   - 10000-10009:10000-10009/udp
+    volumes:
+      - ./origin_conf:/opt/ovenmediaengine/bin/origin_conf
+      - ./logs:/var/log/ovenmediaengine
+      - ./ovenstudio/system.env:/opt/ovenmediaengine/ovenstudio/system.env
+      - ./ovenstudio/data:/opt/ovenmediaengine/ovenstudio/data
+      - ./delivery/delivery.db:/opt/ovenmediaengine/delivery/delivery.db
+      - ./delivery/conf:/opt/ovenmediaengine/delivery/conf

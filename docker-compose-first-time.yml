@@ -18,7 +18,7 @@ services:
     volumes:
       - ./origin_conf:/opt/ovenmediaengine/bin/origin_conf
       - ./logs:/var/log/ovenmediaengine
-      - ./ovenstudio/system.env:/opt/ovenmediaengine/ovenstudio/system.env
+      - ./ovenstudio:/opt/ovenmediaengine/ovenstudio
       - ./ovenstudio/data:/opt/ovenmediaengine/ovenstudio/data
-      - ./delivery/delivery.db:/opt/ovenmediaengine/delivery/delivery.db
+      - ./delivery:/opt/ovenmediaengine/delivery
       - ./delivery/conf:/opt/ovenmediaengine/delivery/conf

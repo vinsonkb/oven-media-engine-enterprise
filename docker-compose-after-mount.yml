@@ -1,6 +1,6 @@
 services:
   ovenmediaengine:
-    image: ovenmediaengine-enterprise
+    image: packages.buildkite.com/ovenmediaengine/docker/ovenmediaengine-enterprise
     container_name: ovenmediaengine
     restart: unless-stopped
     environment:
